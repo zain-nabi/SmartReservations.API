@@ -1,4 +1,5 @@
 ﻿using Application.Interface.Order;
+using Application.Model.Order.Custom;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
@@ -22,7 +23,7 @@ namespace Application.WebApi.Controllers
         [HttpPost]
         [Route("CreateAsync")]
         [SwaggerOperation(Summary = "FindByIdAsync - Gets the user by their UserID", Description = "Returns a single user")]
-        public async Task<ActionResult<Model.Order.Order>> CreateAsync(Model.Order.Order model)
+        public async Task<ActionResult<OrderViewModel>> CreateAsync(OrderViewModel model)
         {
             return await _order.CreateAsync(model);
         }

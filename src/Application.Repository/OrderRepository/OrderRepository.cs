@@ -1,10 +1,12 @@
 ﻿using Application.Interface.Order;
 using Application.Model.Order;
+using Application.Model.Order.Custom;
 using Dapper;
 using Dapper.Contrib.Extensions;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,27 +25,29 @@ namespace Application.Repository.OrderRepository
             _config = configuration;
         }
 
-        public async Task<Model.Order.Order> CreateAsync(Order Order)
+        public async Task<OrderViewModel> CreateAsync(OrderViewModel Orders)
         {
             try
             {
+                var Order = Extensions.ToDataTableFromList(Orders.Orders, true);
                 var connection = Connection.GetOpenConnection(_config.GetConnectionString("Newtryx"));
-                var userId = connection.Insert(Order);
-                Order.orderID = (int)userId;
-                return Order;
+                var data = connection.Query<bool>("proc_InserOrders", new
+                {
+                    Orders = Order.AsTableValuedParameter("OrderTVP")
+                }, commandType: CommandType.StoredProcedure).FirstOrDefault();
+                return Orders;
             }
             catch (Exception e)
             {
-
                 throw;
             }
         }
 
-        public async Task<List<Order>> FindByReservationOrderByIdAsync(int RestaurantID)
+        public async Task<List<Order>> FindByReservationOrderByIdAsync(int ReservationID)
         {
-            const string sql = "SELECT * FROM Order WHERE RestaurantID = @RestaurantID";
+            const string sql = "SELECT * FROM Order WHERE ReservationID = @ReservationID";
             var connection = Connection.GetOpenConnection(_config.GetConnectionString("Newtryx"));
-            return connection.Query<Model.Order.Order>(sql, new { RestaurantID }).ToList();
+            return connection.Query<Model.Order.Order>(sql, new { ReservationID }).ToList();
         }
 
         public async Task<List<Order>> FindByRestaurantOrderByIdAsync(int RestaurantID)

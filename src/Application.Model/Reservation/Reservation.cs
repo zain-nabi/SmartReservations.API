@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Dapper.Contrib.Extensions;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace Application.Model.Reservation
 {
-    [Table("Reservation")]
+    [System.ComponentModel.DataAnnotations.Schema.Table("Reservation")]
     public class Reservation
     {
         [Dapper.Contrib.Extensions.Key]
@@ -19,6 +20,7 @@ namespace Application.Model.Reservation
         public int ReservationStatusID { get; set; }
         public DateTime CreatedOn { get; set; }
         public int CreatedByUserID { get; set; }
+        [Computed]
         public string RestaurantName { get; set; }
     }
 }
