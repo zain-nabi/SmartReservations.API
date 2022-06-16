@@ -45,7 +45,7 @@ namespace Application.Repository.OrderRepository
 
         public async Task<List<Order>> FindByReservationOrderByIdAsync(int ReservationID)
         {
-            const string sql = "SELECT * FROM Order WHERE ReservationID = @ReservationID";
+            const string sql = "SELECT * FROM dbo.[Order] WHERE ReservationID = @ReservationID";
             var connection = Connection.GetOpenConnection(_config.GetConnectionString("Newtryx"));
             return connection.Query<Model.Order.Order>(sql, new { ReservationID }).ToList();
         }

@@ -44,5 +44,13 @@ namespace Application.WebApi.Controllers
         {
             return await _order.Orders(orderID);
         }
+
+        [HttpGet]
+        [Route("FindByReservationOrderByIdAsync")]
+        [SwaggerOperation(Summary = "FindByIdAsync - Gets the user by their UserID", Description = "Returns a single user")]
+        public async Task<ActionResult<List<Model.Order.Order>>> FindByReservationOrderByIdAsync(int ReservationID)
+        {
+            return await _order.FindByReservationOrderByIdAsync(ReservationID);
+        }
     }
 }
