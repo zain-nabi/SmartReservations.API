@@ -92,5 +92,12 @@ namespace Application.Repository.Reservation
             var connection = Connection.GetOpenConnection(_config.GetConnectionString("Newtryx"));
             return connection.Query<Model.Reservation.Reservation>(sql, new { ReservationStatusID = ReservationStatusID }, commandType: CommandType.StoredProcedure).ToList();
         }
+
+        public async Task<Model.Reservation.Reservation> CheckIfReservationExist(string ReservationDate)
+        {
+            const string sql = "proc_CheckIfReservationExist";
+            var connection = Connection.GetOpenConnection(_config.GetConnectionString("Newtryx"));
+            return connection.Query<Model.Reservation.Reservation>(sql, new { ReservationDate = ReservationDate }, commandType: CommandType.StoredProcedure).FirstOrDefault();
+        }
     }
 }

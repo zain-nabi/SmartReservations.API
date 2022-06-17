@@ -48,5 +48,13 @@ namespace Application.WebApi.Controllers
         {
             return await _menuItem.Items();
         }
+
+        [HttpGet]
+        [Route("CheckIfMenuItemExist")]
+        [SwaggerOperation(Summary = "FindByIdAsync - Gets the user by their UserID", Description = "Returns a single user")]
+        public async Task<ActionResult<Model.MenuItem.MenuItem>> CheckIfMenuItemExist(string MenuItem)
+        {
+            return await _menuItem.CheckIfMenuItemExist(MenuItem);
+        }
     }
 }

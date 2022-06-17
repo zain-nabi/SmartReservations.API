@@ -11,5 +11,6 @@ namespace Application.Interface.MenuItem
         Task<bool> UpdateAsync(Model.MenuItem.MenuItem MenuItem);
         Task<Model.MenuItem.MenuItem> FindByIdAsync(int MenuItemID);
         Task<List<Model.MenuItem.MenuItem>> Items();
+        Task<Model.MenuItem.MenuItem> CheckIfMenuItemExist(string MenuItem);
     }
 }

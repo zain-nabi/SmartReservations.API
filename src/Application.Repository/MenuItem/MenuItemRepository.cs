@@ -4,6 +4,7 @@ using Dapper.Contrib.Extensions;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,13 @@ namespace Application.Repository.MenuItem
         public MenuItemRepository(IConfiguration configuration)
         {
             _config = configuration;
+        }
+
+        public async Task<Model.MenuItem.MenuItem> CheckIfMenuItemExist(string MenuItem)
+        {
+            const string sql = "proc_CheckIfMenuItemExist";
+            var connection = Connection.GetOpenConnection(_config.GetConnectionString("Newtryx"));
+            return connection.Query<Model.MenuItem.MenuItem>(sql, new { MenuItem = MenuItem }, commandType: CommandType.StoredProcedure).FirstOrDefault();
         }
 
         public async Task<Model.MenuItem.MenuItem> CreateAsync(Model.MenuItem.MenuItem MenuItem)

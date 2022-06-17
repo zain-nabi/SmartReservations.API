@@ -16,5 +16,6 @@ namespace Application.Interface.Rservation
         Task<Model.Reservation.Reservation> FindByIdAsync(int ReservationID);
         Task<List<Model.Reservation.Reservation>> GetUserReservationsByStatus(int userID, int ReservationStatusID);
         Task<List<Model.Reservation.Reservation>> GetReservationsByStatus(int ReservationStatusID);
+        Task<Model.Reservation.Reservation> CheckIfReservationExist(string ReservationDate);
     }
 }

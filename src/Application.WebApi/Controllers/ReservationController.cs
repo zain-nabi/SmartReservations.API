@@ -92,5 +92,13 @@ namespace Application.WebApi.Controllers
         {
             return await _reservation.GetReservationsByStatus(userID);
         }
+
+        [HttpGet]
+        [Route("CheckIfReservationExist")]
+        [SwaggerOperation(Summary = "FindByIdAsync - Gets the user by their UserID", Description = "Returns a single user")]
+        public async Task<ActionResult<Reservation>> CheckIfReservationExist(string ReservationDate)
+        {
+            return await _reservation.CheckIfReservationExist(ReservationDate);
+        }
     }
 }
