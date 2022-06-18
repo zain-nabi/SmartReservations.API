@@ -13,7 +13,7 @@ namespace Application.Model.Reservation
         public int reservationID { get; set; }
         public int People { get; set; }
         public int RestaurantID { get; set; }
-        public DateTime Time { get; set; }
+        public DateTime ReservationTime { get; set; }
         public string Name { get; set; }
         public string Cell { get; set; }
         public int OrderTotalID { get; set; }
