@@ -99,5 +99,22 @@ namespace Application.Repository.Reservation
             var connection = Connection.GetOpenConnection(_config.GetConnectionString("Newtryx"));
             return connection.Query<Model.Reservation.Reservation>(sql, new { ReservationDate = ReservationDate }, commandType: CommandType.StoredProcedure).FirstOrDefault();
         }
+
+        public async Task<List<Model.Reservation.Reservation>> GetBookedReservationByDate(DateTime startDate, DateTime endDate)
+        {
+            const string sql = @"SELECT
+	                                R.Name,
+	                                R.Cell,
+	                                R.People,
+	                                R.CreatedOn,
+	                                RS.Status,
+	                                R.ReservationTime
+                                FROM RESERVATION R
+                                INNER JOIN [ORDER] O ON O.RESERVATIONID = R.RESERVATIONID
+                                INNER JOIN RESERVATIONSTATUS RS ON RS.RESERVATIONSTATUSID = R.RESERVATIONSTATUSID
+                                WHERE R.CREATEDON >= @startDate AND R.CreatedOn  <= @endDate AND RS.reservationstatusID = 1";
+            var connection = Connection.GetOpenConnection(_config.GetConnectionString("Newtryx"));
+            return connection.Query<Model.Reservation.Reservation>(sql, new { startDate, endDate }).ToList();
+        }
     }
 }

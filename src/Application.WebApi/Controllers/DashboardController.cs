@@ -4,6 +4,7 @@ using Application.Reporting.Model;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
+using System;
 using System.Net.Mime;
 using System.Threading.Tasks;
 
@@ -61,6 +62,24 @@ namespace Application.WebApi.Controllers
                 throw;
             }
             
+        }
+
+        [HttpGet]
+        [Route("BookedReservationsByDateAsync")]
+        [SwaggerOperation(Summary = "FindByIdAsync - Gets the user by their UserID", Description = "Returns a single user")]
+        public async Task<byte[]> BookedReservationsByDateAsync(string reportName, string reportType, DateTime startDate, DateTime endDate)
+        {
+            try
+            {
+                return await _report.BookedReservationsByDateAsync(reportName, reportType, startDate, endDate);
+
+            }
+            catch (System.Exception e)
+            {
+
+                throw;
+            }
+
         }
     }
 }

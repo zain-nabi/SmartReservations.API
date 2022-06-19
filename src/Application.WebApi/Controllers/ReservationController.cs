@@ -3,6 +3,7 @@ using Application.Model.Reservation;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -99,6 +100,14 @@ namespace Application.WebApi.Controllers
         public async Task<ActionResult<Reservation>> CheckIfReservationExist(string ReservationDate)
         {
             return await _reservation.CheckIfReservationExist(ReservationDate);
+        }
+
+        [HttpGet]
+        [Route("GetBookedReservationByDate")]
+        [SwaggerOperation(Summary = "FindByIdAsync - Gets the user by their UserID", Description = "Returns a single user")]
+        public async Task<ActionResult<List<Reservation>>> GetBookedReservationByDate(DateTime startDate, DateTime endDate)
+        {
+            return await _reservation.GetBookedReservationByDate(startDate, endDate);
         }
     }
 }

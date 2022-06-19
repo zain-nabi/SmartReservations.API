@@ -5,10 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="ReportFiles\BookedReservations.rdl" />
     <None Remove="ReportFiles\Users1.rdl" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="ReportFiles\BookedReservations.rdl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="ReportFiles\Users1.rdl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
