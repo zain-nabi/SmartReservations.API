@@ -23,4 +23,9 @@ namespace Application.Interface.User.Custom
         public int RoleID { get; set; }
         public string CustomerNames { get; set; }
     }
+
+    public class ExternalUserReportModel
+    {
+        public List<ExternalUserModel> ExternalUserModel { get; set; }
+    }
 }

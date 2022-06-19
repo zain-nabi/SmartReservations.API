@@ -225,6 +225,10 @@
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.1, )"
+            },
+            "System.Text.Encoding.CodePages": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             }
           },
           "imports": [

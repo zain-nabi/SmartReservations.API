@@ -156,6 +156,84 @@
         }
       }
     },
+    "C:\\Users\\zaino\\Documents\\Visual Studio 2022\\Projects\\IS.LoanApplication.WebApi\\src\\Application.Reporting\\Application.Reporting.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\zaino\\Documents\\Visual Studio 2022\\Projects\\IS.LoanApplication.WebApi\\src\\Application.Reporting\\Application.Reporting.csproj",
+        "projectName": "Application.Reporting",
+        "projectPath": "C:\\Users\\zaino\\Documents\\Visual Studio 2022\\Projects\\IS.LoanApplication.WebApi\\src\\Application.Reporting\\Application.Reporting.csproj",
+        "packagesPath": "C:\\Users\\zaino\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zaino\\Documents\\Visual Studio 2022\\Projects\\IS.LoanApplication.WebApi\\src\\Application.Reporting\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\zaino\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {
+              "C:\\Users\\zaino\\Documents\\Visual Studio 2022\\Projects\\IS.LoanApplication.WebApi\\src\\Application.Interface\\Application.Interface.csproj": {
+                "projectPath": "C:\\Users\\zaino\\Documents\\Visual Studio 2022\\Projects\\IS.LoanApplication.WebApi\\src\\Application.Interface\\Application.Interface.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "AspNetCore.Reporting": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "System.Text.Encoding.CodePages": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\zaino\\Documents\\Visual Studio 2022\\Projects\\IS.LoanApplication.WebApi\\src\\Application.Repository\\Application.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -225,6 +303,10 @@
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.1, )"
+            },
+            "System.Text.Encoding.CodePages": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             }
           },
           "imports": [
@@ -273,6 +355,9 @@
               "C:\\Users\\zaino\\Documents\\Visual Studio 2022\\Projects\\IS.LoanApplication.WebApi\\src\\Application.Interface\\Application.Interface.csproj": {
                 "projectPath": "C:\\Users\\zaino\\Documents\\Visual Studio 2022\\Projects\\IS.LoanApplication.WebApi\\src\\Application.Interface\\Application.Interface.csproj"
               },
+              "C:\\Users\\zaino\\Documents\\Visual Studio 2022\\Projects\\IS.LoanApplication.WebApi\\src\\Application.Reporting\\Application.Reporting.csproj": {
+                "projectPath": "C:\\Users\\zaino\\Documents\\Visual Studio 2022\\Projects\\IS.LoanApplication.WebApi\\src\\Application.Reporting\\Application.Reporting.csproj"
+              },
               "C:\\Users\\zaino\\Documents\\Visual Studio 2022\\Projects\\IS.LoanApplication.WebApi\\src\\Application.Repository\\Application.Repository.csproj": {
                 "projectPath": "C:\\Users\\zaino\\Documents\\Visual Studio 2022\\Projects\\IS.LoanApplication.WebApi\\src\\Application.Repository\\Application.Repository.csproj"
               }
@@ -289,6 +374,14 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "AspNetCore.Reporting": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "ReportViewerCore.NETCore": {
+              "target": "Package",
+              "version": "[15.1.15, )"
+            },
             "Swashbuckle.AspNetCore.Annotations": {
               "target": "Package",
               "version": "[5.3.0, )"
@@ -304,6 +397,14 @@
             "Swashbuckle.AspNetCore.SwaggerUI": {
               "target": "Package",
               "version": "[5.3.0, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[5.0.3, )"
+            },
+            "System.Text.Encoding.CodePages": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             }
           },
           "imports": [

@@ -1,0 +1,15 @@
+C:\Users\zaino\Documents\Visual Studio 2022\Projects\IS.LoanApplication.WebApi\src\Application.Reporting\bin\Debug\netstandard2.0\Application.Reporting.deps.json
+C:\Users\zaino\Documents\Visual Studio 2022\Projects\IS.LoanApplication.WebApi\src\Application.Reporting\bin\Debug\netstandard2.0\Application.Reporting.dll
+C:\Users\zaino\Documents\Visual Studio 2022\Projects\IS.LoanApplication.WebApi\src\Application.Reporting\bin\Debug\netstandard2.0\Application.Reporting.pdb
+C:\Users\zaino\Documents\Visual Studio 2022\Projects\IS.LoanApplication.WebApi\src\Application.Reporting\bin\Debug\netstandard2.0\Application.Interface.dll
+C:\Users\zaino\Documents\Visual Studio 2022\Projects\IS.LoanApplication.WebApi\src\Application.Reporting\bin\Debug\netstandard2.0\Application.Model.dll
+C:\Users\zaino\Documents\Visual Studio 2022\Projects\IS.LoanApplication.WebApi\src\Application.Reporting\bin\Debug\netstandard2.0\Application.Interface.pdb
+C:\Users\zaino\Documents\Visual Studio 2022\Projects\IS.LoanApplication.WebApi\src\Application.Reporting\bin\Debug\netstandard2.0\Application.Model.pdb
+C:\Users\zaino\Documents\Visual Studio 2022\Projects\IS.LoanApplication.WebApi\src\Application.Reporting\obj\Debug\netstandard2.0\Application.Reporting.csproj.AssemblyReference.cache
+C:\Users\zaino\Documents\Visual Studio 2022\Projects\IS.LoanApplication.WebApi\src\Application.Reporting\obj\Debug\netstandard2.0\Application.Reporting.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zaino\Documents\Visual Studio 2022\Projects\IS.LoanApplication.WebApi\src\Application.Reporting\obj\Debug\netstandard2.0\Application.Reporting.AssemblyInfoInputs.cache
+C:\Users\zaino\Documents\Visual Studio 2022\Projects\IS.LoanApplication.WebApi\src\Application.Reporting\obj\Debug\netstandard2.0\Application.Reporting.AssemblyInfo.cs
+C:\Users\zaino\Documents\Visual Studio 2022\Projects\IS.LoanApplication.WebApi\src\Application.Reporting\obj\Debug\netstandard2.0\Application.Reporting.csproj.CoreCompileInputs.cache
+C:\Users\zaino\Documents\Visual Studio 2022\Projects\IS.LoanApplication.WebApi\src\Application.Reporting\obj\Debug\netstandard2.0\Application.Reporting.csproj.CopyComplete
+C:\Users\zaino\Documents\Visual Studio 2022\Projects\IS.LoanApplication.WebApi\src\Application.Reporting\obj\Debug\netstandard2.0\Application.Reporting.dll
+C:\Users\zaino\Documents\Visual Studio 2022\Projects\IS.LoanApplication.WebApi\src\Application.Reporting\obj\Debug\netstandard2.0\Application.Reporting.pdb

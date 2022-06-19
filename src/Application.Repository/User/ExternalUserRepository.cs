@@ -120,5 +120,21 @@ namespace Application.Repository.User
             var connection = Connection.GetOpenConnection(_config.GetConnectionString("Newtryx"));
             return connection.Query<ExternalUserModel>(sql, new { externalUserID = externalUserID }).FirstOrDefault();
         }
+
+        public async Task<ExternalUserReportModel> GetReportUsers()
+        {
+            var connection = Connection.GetOpenConnection(_config.GetConnectionString("Newtryx"));
+
+            const string sql = "SELECT FirstName, LastName, Email, PhoneNumber FROM ExternalUser";
+            var bookingsModel = new ExternalUserReportModel();
+
+            using (var multi = connection.QueryMultiple(sql))
+            {
+                bookingsModel.ExternalUserModel = multi.Read<ExternalUserModel>().ToList();
+            }
+
+            return bookingsModel;
+        }
+
     }
 }

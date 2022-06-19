@@ -7,6 +7,8 @@ using Application.Interface.Rservation;
 using Application.Interface.RservationStatus;
 using Application.Interface.TableSettings;
 using Application.Interface.User;
+using Application.Reporting;
+using Application.Reporting.IReport;
 using Application.Repository.Dashboard;
 using Application.Repository.MenuItem;
 using Application.Repository.OrderRepository;
@@ -34,6 +36,7 @@ namespace Application.WebApi.Dependancy_Injection
             services.AddTransient<IReservationStatus, ReservationStatusRepository>();
             services.AddTransient<IMenuItem, MenuItemRepository>();
             services.AddTransient<IDashboard, DashboardRepository>();
+            services.AddTransient<IReport, ReportService>();
         }
     }
 }

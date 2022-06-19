@@ -18,5 +18,6 @@ namespace Application.Interface.User
         Task<List<ExternalUserModel>> GetUserWithRoles();
         Task<ExternalUser> CheckIfEmailExist(string email);
         Task<ExternalUserModel> FindByExternalUserID(int externalUserID);
+        Task<ExternalUserReportModel> GetReportUsers();
     }
 }

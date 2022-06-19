@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{BD3CF180-098
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application.WebApi", "src\Application.WebApi\Application.WebApi.csproj", "{8B3F9421-2F20-48AE-BF67-06A9EAD76416}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.Reporting", "src\Application.Reporting\Application.Reporting.csproj", "{431D86CE-7CFC-4A56-A93E-E6B8751229D2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{8B3F9421-2F20-48AE-BF67-06A9EAD76416}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B3F9421-2F20-48AE-BF67-06A9EAD76416}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B3F9421-2F20-48AE-BF67-06A9EAD76416}.Release|Any CPU.Build.0 = Release|Any CPU
+		{431D86CE-7CFC-4A56-A93E-E6B8751229D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{431D86CE-7CFC-4A56-A93E-E6B8751229D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{431D86CE-7CFC-4A56-A93E-E6B8751229D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{431D86CE-7CFC-4A56-A93E-E6B8751229D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +50,7 @@ Global
 		{CD795367-6FC6-4271-85AB-EC61AB971C2C} = {BD3CF180-0980-4851-8BF6-319FBEC53DAA}
 		{1CFF2164-9DEF-4DA0-B2B1-11DCBFEBD46E} = {BD3CF180-0980-4851-8BF6-319FBEC53DAA}
 		{8B3F9421-2F20-48AE-BF67-06A9EAD76416} = {BD3CF180-0980-4851-8BF6-319FBEC53DAA}
+		{431D86CE-7CFC-4A56-A93E-E6B8751229D2} = {BD3CF180-0980-4851-8BF6-319FBEC53DAA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D60CE7FA-35D6-4B18-A2C9-277583521A13}
